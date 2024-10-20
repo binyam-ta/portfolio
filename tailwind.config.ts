@@ -21,12 +21,24 @@ const config: Config = {
       },
     },
     extend: {
+      maskImage: {
+        'fade-mask': 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
+      },
       fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)'
       }
     },
   },
-  plugins: [],
+  plugins: [ 
+     // @ts-ignore: Suppress TypeScript type error for the addUtilities argument
+      function ({ addUtilities }) {
+    addUtilities({
+      '.fade-mask': {
+        '-webkit-mask-image': 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
+        'mask-image': 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
+      },
+    });
+  },],
 };
 export default config;
