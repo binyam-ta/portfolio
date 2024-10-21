@@ -23,6 +23,7 @@ const config: Config = {
     extend: {
       maskImage: {
         'fade-mask': 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
+        'fade-maskk': 'linear-gradient(to right, transparent, black 10%, black 70%, transparent)',
       },
       fontFamily: {
         sans: 'var(--font-sans)',
