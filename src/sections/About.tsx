@@ -1,6 +1,6 @@
+'use client';
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
-import StarIcon from '@/assets/icons/star.svg'
 import Image from "next/image";
 import BokorImage from '@/assets/images/book-cover.png'
 import JavascriptIcon from '@/assets/icons/square-js.svg'
@@ -9,15 +9,17 @@ import CSSIcon from '@/assets/icons/css3.svg'
 import ReactIcon from '@/assets/icons/react.svg'
 import ChromeIcon from '@/assets/icons/chrome.svg'
 import GithubIcon from '@/assets/icons/github.svg'
-import { Techicon } from "@/components/Techicon"; 
 import smileMemoji from '@/assets/images/memoji-smile.png' 
 import mapImage from '@/assets/images/map.png'
 import { CardHeader } from "@/components/CardHeader";
-
+import { ToolboxItems } from "@/components/ToolboxItems";
+import { frame, motion } from "framer-motion";
+import { useRef } from "react";
 const toolboxItems = [
   {
     title: "javaScript",
     iconType: JavascriptIcon,
+    
   },
   {
     title: "HTML5",
@@ -44,75 +46,125 @@ const hobbies = [
   {
     title:"Movies",
     emoji:"🎥",
+    left: "5%",
+    top: "5%",
   },
   {
-    title:"Pjotography",
+    title:"Photography",
     emoji: "📷",
-  },
-  {
-    title:"Gaming",
-    emoji:"🎮",
+    left: "50%",
+    top: "5%",
   },
   {
     title:"walking",
     emoji:"🚶‍♂️",
+    left: "35%",
+    top: "40%",
   },
+  {
+    title:"Gaming",
+    emoji:"🎮",
+    left: "10%",
+    top: "35%",
+  },
+ 
   {
     title:"Music",
     emoji:"🎵",
+    left: "70%",
+    top: "45%",
   },
   {
     title:"Reading",
     emoji:"📚",
+    left: "5%",
+    top: "65%",
   },
   {
     title:"Fitness",
     emoji:"🏋️‍♂️",
+    left: "45%",
+    top: "70%",
   },
 ]
 export const AboutSection = () => {
+  const constraintRef = useRef(null);
   return (
-    <div className="py-20">
+    <div id="about" className="py-20 lg:py-28">
       <div className="container">
       <SectionHeader
         eyebrow="About Me"
         title="A Glimpse Into My World"
         description="Learn more About who I am, What I do, and What inspiers me." 
       />
-      <div className="mt-20">
-      <Card className="h-[320px]">
+      <div className="mt-20 flex flex-col gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+      <Card className="h-[320px] md:col-span-2 lg:col-span-1">
         <CardHeader title="My Reads" description="Explore the books shaping my perspectives."/>
       
-        <div className="w-40 mx-auto mt-8">
+        <div className="w-40 mx-auto mt-2 md:mt-0 ">
         <Image src={BokorImage} alt="BookImage" />
         </div>
       </Card>
-      <Card>
-      <CardHeader title="My Toolbox" description="Explore the technologies and tools I use to create exceptional digital experiences."/>
-        <div>
-          {toolboxItems.map((item) => (
-            <div key={item.title}  className="inline-flex items-center gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg">  {/* Unique key */}
-              <Techicon component={item.iconType} />  {/* Ensure correct component */}
-              <span className="font-semibold">{item.title}</span>
-            </div>
-          ))}
-        </div>
+      <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+      <CardHeader
+       title="My Toolbox" 
+       description="Explore the technologies and tools I use to create exceptional digital experiences."
+       className=""/>
+       <ToolboxItems items={toolboxItems} className="" itemsWrapperClassName="animate-move-left [animation-duration:20s]"/>
+       <ToolboxItems items={toolboxItems}
+        className="mt-6"
+        itemsWrapperClassName="animate-move-right [animation-duration: 15s]"/>
       </Card>
-      <Card>
-      <CardHeader title="Beyond the Code" description="Explore my interests and hobby beyond the digital realm."/>
-       <div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:grid-cols-3">
+      <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+      <CardHeader
+      className="px-6 py-6"
+       title="Beyond the Code" 
+       description="Explore my interests and hobby beyond the digital realm."/>
+       <div className="relative flex-1" ref={constraintRef}>
         {hobbies.map(hobby => (
-          <div key={hobby.title}>
-            <span>{hobby.title}</span>
+          <motion.div
+           key={hobby.title}
+           className="inline-flex items-center gap-2
+            px-6 bg-gradient-to-r from-emerald-300
+             to-sky-400 rounded-full py-1.5 absolute"
+             style={
+              {
+                left: hobby.left,
+                top: hobby.top,
+              }
+             }drag 
+             dragConstraints={constraintRef}>
+            <span className="font-medium
+             text-gray-950">{hobby.title}</span>
             <span>{hobby.emoji}</span>
-          </div>
+          </motion.div>
         ))}
        </div>
       </Card>
-      <Card>
-        <Image src={mapImage} alt="map"/>
-        <Image src={smileMemoji} alt="smiling memoji"/>
+      <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
+        <Image src={mapImage} alt="map"
+        className="h-full w-full object-cover object-left-top"/>
+        <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full 
+        after:content-['']
+         after:absolute after:inset-2 
+         after:outline after:outline-2 
+         after:-outline-offset-2 after:rounded-full
+         after:outline-gray-950/10">
+          <div className="absolute inset-0 rounded-full 
+          bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"> 
+          </div>
+          <div className="absolute inset-0 rounded-full 
+          bg-gradient-to-r from-emerald-300 to-sky-400 -z-10 "> 
+          </div>
+        <Image src={smileMemoji} alt="smiling memoji"
+        className="size-20"/>
+        </div>
       </Card>
+      </div>
       </div>
     </div>
     </div>

@@ -7,6 +7,7 @@ import SparkleIcon from '@/assets/icons/sparkle.svg'
 import { HeroOrbit } from '@/components/HeroOrbit';
 export const HeroSection = () => {
   return (
+    <section id='hero'>
   <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
    <div className="absolute inset-0 fade-mask">
     <div className="absolute inset-0 -z-30 opacity-5"
@@ -60,7 +61,10 @@ export const HeroSection = () => {
     className='size-[100px]'
     alt="person peeking from behind laptop"/>
     <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
-      <div className='bg-green-500 size-2.5 rounded-full'></div>
+      <div className='bg-green-500 size-2.5 rounded-full relative '>
+        <div className="bg-green-500 absolute inset-0 
+        rounded-full animate-ping"></div>
+      </div>
       <div className='text-sm font-medium'>Available for new projects</div>
       </div>
     </div>
@@ -81,5 +85,6 @@ export const HeroSection = () => {
       </button>
     </div>
    </div>
-  </div> );
+  </div>
+  </section> );
 };
