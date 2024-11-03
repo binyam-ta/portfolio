@@ -5,6 +5,7 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from '@/assets/icons/star.svg'
 import SparkleIcon from '@/assets/icons/sparkle.svg'
 import { HeroOrbit } from '@/components/HeroOrbit';
+import Link from 'next/link';
 export const HeroSection = () => {
   return (
     <section id='hero'>
@@ -75,10 +76,17 @@ export const HeroSection = () => {
       web applications. Let's discuss your next project.
     </p></div>
     <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
+    {/* <Link href="#projects" passHref>
       <button className='inline-flex items-center gap-2 border border-white/15  px-6 h-12'>
         <span className='font-semibold'>Explore My Work</span>
         <ArrowDown className='size-4' />
+      </button> </Link> */}
+       <Link href="#projects" passHref>
+      <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 cursor-pointer">
+        <span className="font-semibold">Explore My Work</span>
+        <ArrowDown className="size-4" />
       </button>
+    </Link>
       <button className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 p-6 rounded-xl'>
         <span>🖐️</span>
         <span className='font-semibold'>Let's connect</span>
