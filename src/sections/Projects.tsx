@@ -1,4 +1,5 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+import tubeai from "@/assets/images/tubeai.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from 'next/image';
@@ -9,16 +10,16 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 const portfolioProjects = [
   {
-    company: "Acme Corp",
+    company: "Tubeai",
     year: "2022",
-    title: "Dark Saas Landing Page",
+    title: "AI Content Agent",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://tubeai-beze.vercel.app/",
+    image: tubeai,
   },
   {
     company: "Innovative Co",
@@ -29,7 +30,7 @@ const portfolioProjects = [
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://tubeai-beze.vercel.app/",
     image: lightSaasLandingPage,
   },
   {
@@ -41,7 +42,7 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://tubeai-beze.vercel.app/",
     image: aiStartupLandingPage,
   },
  
