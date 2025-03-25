@@ -1,4 +1,6 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+import skillswap from "@/assets/images/skillswap.png";
+import ethiotarik from "@/assets/images/ethiotarik.png";
 import tubeai from "@/assets/images/tubeai.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -22,28 +24,28 @@ const portfolioProjects = [
     image: tubeai,
   },
   {
-    company: "Innovative Co",
+    company: "BSaaS",
     year: "2021",
-    title: "Light Saas Landing Page",
+    title: "Share Skills, Grow Together",
     results: [
       { title: "Boosted sales by 20%" },
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://tubeai-beze.vercel.app/",
-    image: lightSaasLandingPage,
+    link: "https://skillswap-three.vercel.app/",
+    image: skillswap,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "ethiotarik",
+    year: "2025",
+    title: "Ethiotarik ",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://tubeai-beze.vercel.app/",
-    image: aiStartupLandingPage,
+    link: "https://ethiotarik.vercel.app/",
+    image: ethiotarik,
   },
  
 ];
