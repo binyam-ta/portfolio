@@ -10,7 +10,7 @@ const footerLinks = [
   },
   {
     title:'Telegram',
-    href:'https://t.me/binyamjo',
+    href:'https://t.me/binyamseleshe',
   },
   {
     title:'Instagram',

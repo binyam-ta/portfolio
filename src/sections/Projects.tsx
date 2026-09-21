@@ -1,6 +1,6 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import skillswap from "@/assets/images/skillswap.png";
-import ethiotarik from "@/assets/images/ethiotarik.png";
+import addiseats from "@/assets/images/addiseats.png";
 import tubeai from "@/assets/images/tubeai.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -36,16 +36,16 @@ const portfolioProjects = [
     image: skillswap,
   },
   {
-    company: "ethiotarik",
+    company: "IBT",
     year: "2025",
-    title: "Ethiotarik ",
+    title: "AddisEats ",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://ethiotarik.vercel.app/",
-    image: ethiotarik,
+    link: "https://code-ops-module03.vercel.app//",
+    image: addiseats,
   },
  
 ];
