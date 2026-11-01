@@ -1,5 +1,5 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import skillswap from "@/assets/images/skillswap.png";
+import samsam from "@/assets/images/samsam.png";
 import addiseats from "@/assets/images/addiseats.png";
 import tubeai from "@/assets/images/tubeai.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
@@ -11,9 +11,21 @@ import grainImage from '@/assets/images/grain.jpg'
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 const portfolioProjects = [
+    {
+    company: "samsam",
+    year: "2026",
+    title: "one payment gateway for all your needs",
+    results: [
+      { title: "Boosted sales by 20%" },
+      { title: "Expanded customer reach by 35%" },
+      { title: "Increased brand awareness by 15%" },
+    ],
+    link: "https://sam-sam-uahz.vercel.app/",
+    image: samsam,
+  },
   {
     company: "Tubeai",
-    year: "2022",
+    year: "2024",
     title: "AI Content Agent",
     results: [
       { title: "Enhanced user experience by 40%" },
@@ -24,20 +36,8 @@ const portfolioProjects = [
     image: tubeai,
   },
   {
-    company: "BSaaS",
-    year: "2021",
-    title: "Share Skills, Grow Together",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://skillswap-three.vercel.app/",
-    image: skillswap,
-  },
-  {
     company: "IBT",
-    year: "2025",
+    year: "2026",
     title: "AddisEats ",
     results: [
       { title: "Enhanced user experience by 40%" },
